@@ -24,20 +24,13 @@ Personal Finance Manager
 
 ## Objectives
 
-* Accurate transaction processing
-* Secure authentication
-* Reliable data storage
+
 
 ---
 
 ## Features
 
-* Create Account
-* Login System
-* Deposit Money
-* Withdraw Money
-* Check Balance
-* File Handling using `.txt` files
+
 
 ---
 
