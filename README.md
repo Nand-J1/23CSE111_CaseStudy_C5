@@ -84,15 +84,25 @@ README.md
 ---
 
 ## Sample Input
-
+* name: John
+* job: Software Engineer
+* Salary: 100000
+* addCategory: Food
+* budget for category:2000
+* withdraw money:1000,food
+* view chart: pie
 ---
 
 ## Sample Output
-
+* Registration successful
+* category created
+* budget allocated
+* money withdrawn
+* pie chart staged
 ---
 
 ## Notes
-
+* uses file handling to store the data(USERS,TRANSACTIONS,CATEGORIES)
 
 
 ---
