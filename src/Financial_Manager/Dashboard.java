@@ -52,7 +52,8 @@ public class Dashboard extends Application {
             System.out.println("5. View Expense Chart");
             System.out.println("6. View User Details");
             System.out.println("7. Savings");
-            System.out.println("8. Exit");
+            System.out.println("8.. Add Money");
+            System.out.println("9. Exit");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -115,6 +116,13 @@ public class Dashboard extends Application {
 	                        break;
 	                    }
                 case 8:
+                	System.out.println("Enter Category:");
+                	String c=sc.nextLine();
+                	System.out.print("Enter amount: ");
+                    double b = sc.nextDouble();
+                    sc.nextLine();
+                	user.addMoney(b, c);
+                case 9:
                     running = false;
                     System.out.println("Exiting...");
                     break;    
