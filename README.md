@@ -77,9 +77,11 @@ README.md
 ## How to Run the Code
 
 1. Clone the repository
-2. Open in Eclipse
-3. Run the Main class
-4. Use menu options to perform operations
+2. Open in Eclipse.
+3. Create a project called Personal_Financial_Manager.
+4. Copy source files into this project.
+5. Run the Dashboard class
+6. Use menu options to perform operations.
 
 ---
 
