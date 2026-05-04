@@ -117,6 +117,7 @@ public class Dashboard extends Application {
 	                        System.out.println("Total Savings: " + user.getSavingsTotal());
 	                        break;
 	                    }
+					break;
                 case 8:
                 	System.out.println("Enter Category:");
                 	String c=sc.nextLine();
