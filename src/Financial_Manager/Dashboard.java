@@ -116,15 +116,36 @@ public class Dashboard extends Application {
 	                    case 3:
 	                        System.out.println("Total Savings: " + user.getSavingsTotal());
 	                        break;
+	                    default:
+	                        System.out.println("Invalid choice.");
 	                    }
-					break;
+                    break;
                 case 8:
-                	System.out.println("Enter Category:");
-                	String c=sc.nextLine();
-                	System.out.print("Enter amount: ");
-                    double b = sc.nextDouble();
+                	System.out.println("1. Add Budget");
+                    System.out.println("2. Add money to Category");
+                    int bopt = sc.nextInt();
                     sc.nextLine();
-                	user.addMoney(b, c);
+                    switch(bopt) {
+	                    case 1:
+	                        System.out.print("Enter budget amount: ");
+	                        double bamount = sc.nextDouble();
+	                        sc.nextLine();
+	                        user.setBudget(bamount);
+	                        break;
+	                    case 2:
+	                    	System.out.println("Enter Category:");
+	                    	String c=sc.nextLine();
+	                    	System.out.print("Enter amount: ");
+	                        double b = sc.nextDouble();
+	                        sc.nextLine();
+	                    	user.addMoney(b, c);
+	                    	System.out.println(b+" has been added to "+c);
+	                        break;                    	
+	                    default:
+	                    	System.out.println("Invalid choice.");
+	                    }
+                	
+                	break;
                 case 9:
                     running = false;
                     System.out.println("Exiting...");

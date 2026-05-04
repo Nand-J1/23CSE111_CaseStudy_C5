@@ -30,12 +30,10 @@ public class User {
 			System.out.println("Your budget is above your daily income.");
 		}else {
 			budget=x;
+			System.out.println("Your budget is set.");
 		}
 	}
-	public void changeIncome(double x) {
-		income=x;
-		System.out.println("New Income is "+income);
-	}
+	
 	//functions related to category
 	public void addCategory(String s,double b) {
 		Category newC=new Category(s,b);
