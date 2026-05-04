@@ -10,10 +10,10 @@ Personal Finance Manager
 
 | Roll No          | Student Name      | Role        |
 | ---------------- | ----------------- |--------------
-| AM.SC.U4CSE25218 | Tulasi Lasya      |  |
-| AM.SC.U4CSE25220 | Hansika Chawla    |   |
-| AM.SC.U4CSE25230 | Lekshmi Nandana   |  |
-| AM.SC.U4CSE25236 | Nandana Jayakumar |   |
+| AM.SC.U4CSE25218 | Tulasi Lasya      |  UML Diagram |
+| AM.SC.U4CSE25220 | Hansika Chawla    |  Documenation|
+| AM.SC.U4CSE25230 | Lekshmi Nandana   |  Class Design   |
+| AM.SC.U4CSE25236 | Nandana Jayakumar |  Logic Implementation |
 
 
 ## Problem Description
@@ -47,7 +47,7 @@ The **Personal Finance Manager** aims to solve this problem by providing a struc
 * Alert System
   * Notify users when budget is nearly exceeded
 * Analytics / Reports
-  * Show spending patterns (basic summaries or charts conceptually)
+  * Show spending patterns 
 
 
 ---
