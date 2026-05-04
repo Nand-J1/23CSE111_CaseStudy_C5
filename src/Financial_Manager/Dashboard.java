@@ -52,7 +52,7 @@ public class Dashboard extends Application {
             System.out.println("5. View Expense Chart");
             System.out.println("6. View User Details");
             System.out.println("7. Savings");
-            System.out.println("8.. Add Money");
+            System.out.println("8.Add Money");
             System.out.println("9. Exit");
             System.out.print("Enter choice: ");
             int choice = sc.nextInt();
@@ -104,11 +104,13 @@ public class Dashboard extends Application {
 	                    case 1:
 	                        System.out.print("Enter amount to save: ");
 	                        double saveAmt = sc.nextDouble();
+	                        sc.nextLine();
 	                        user.addToSavings(saveAmt);
 	                        break;
 	                    case 2:
 	                        System.out.print("Enter amount to withdraw from savings: ");
 	                        double withdrawAmt = sc.nextDouble();
+	                        sc.nextLine();
 	                        user.withdrawFromSavings(withdrawAmt);
 	                        break;
 	                    case 3:
