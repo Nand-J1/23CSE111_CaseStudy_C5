@@ -1,5 +1,4 @@
 package Financial_Manager;
-
 import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,6 +30,7 @@ public class User {
 		}else {
 			budget=x;
 			System.out.println("Your budget is set.");
+			saveUserUpdate();
 		}
 	}
 	
@@ -74,6 +74,32 @@ public class User {
 			t.getTransactionDetails();
 		}
 	}
+	public void saveUserUpdate() {
+	    File inputFile = new File("users.txt");
+	    File tempFile = new File("users_temp.txt");
+
+	    try (BufferedReader br = new BufferedReader(new FileReader(inputFile));
+	         PrintWriter pw = new PrintWriter(new FileWriter(tempFile))) {
+
+	        String line;
+	        while ((line = br.readLine()) != null) {
+	            String[] parts = line.split(",");
+	            
+	            if (parts[0].equalsIgnoreCase(this.name)) {
+	                pw.println(name + "," + job + "," + password + "," + income + "," + budget);
+	            } else {
+	                pw.println(line);
+	            }
+	        }
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+
+	    
+	    if (inputFile.delete()) {
+	        tempFile.renameTo(inputFile);
+	    }
+	}
 	public Category findCategory(String cat) {
 		for(Category c:categories) {
 			if( c.getCategoryName().equalsIgnoreCase(cat)){
@@ -116,6 +142,7 @@ public class User {
 		Category cat=findCategory(s);
 		if (cat!=null) {
 			cat.addMoney(b);
+			updateCategoryFile();
 		}else {
 			System.out.println("Category does not exist.");
 		}
@@ -186,4 +213,4 @@ public class User {
 
 	
 }
-	
+
