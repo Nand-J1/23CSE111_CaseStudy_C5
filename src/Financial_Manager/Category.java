@@ -11,20 +11,20 @@ public class Category {
         this.spent = 0;
     }
 
-    public void withdrawMoney(double b) {
-        if (spent > budget) {
+    public boolean withdrawMoney(double b) {
+        if (spent+b >= budget) {
         	new AlertManager().overspendingAlert();
+        	return false;
     }else {
     	spent += b;
-    	new AlertManager().spendingAlert(spent, budget);
-
+    	return true;
     }}
 
     public void addMoney(double b) {
-        spent -= b;
-        if (spent < 0) spent = 0;
-    }
-
+     if(b>0) {
+    	 budget=budget+b;
+    	 }
+     }
     public void restoreSpent(double s) {
         this.spent = s;
     }
