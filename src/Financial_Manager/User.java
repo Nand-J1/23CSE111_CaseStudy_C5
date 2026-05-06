@@ -84,11 +84,11 @@ public class User {
 	public void withdrawMoney(double amount, String s) {
         Category cat = findCategory(s);
         if (cat != null) {
-            cat.withdrawMoney(amount);
-            Transaction txn = new Transaction(amount, cat);
+			if (cat.withdrawMoney(amount)==true){
+            	Transaction txn = new Transaction(amount, cat);
             transactions.add(txn);
             saveTransaction(txn);
-            updateCategoryFile();
+            updateCategoryFile();}
             new AlertManager().spendingAlert(cat.getSpent(), cat.getBudget());
         } else {
             System.out.println("Category does not exist.");
